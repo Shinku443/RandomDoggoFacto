@@ -5,6 +5,6 @@ import retrofit2.http.GET
 
 interface DogApi {
 
-    @GET("/search")
-    suspend fun getDogItem(): DogFactItem
+    @GET("images/search")
+    suspend fun getDogItem(): List<DogFactItem>
 }

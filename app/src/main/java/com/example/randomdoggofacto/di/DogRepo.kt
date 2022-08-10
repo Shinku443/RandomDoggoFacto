@@ -9,7 +9,7 @@ import javax.inject.Inject
 class DogRepository @Inject constructor(
     private val api: DogApi,
 ) {
-    suspend fun getDogItem(): Resource<DogFactItem> {
+    suspend fun getDogItem(): Resource<List<DogFactItem>> {
         val response = try {
             api.getDogItem()
         } catch (e: Exception) {
